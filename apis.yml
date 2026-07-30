@@ -1,23 +1,74 @@
 aid: lifemed-media
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lifemed-media.png
 name: LifeMed Media
-description: LifeMed Media is a company surfaced as a portfolio company of battery-ventures and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: 'LifeMed Media was a consumer health media company that operated dLife,
+  a diabetes-focused media brand spanning dLife.com, the dLifeTV television program,
+  the dLife Foundation, a diabetes retail store, and a section for healthcare professionals.
+  Its editorial surface covered type 1, type 2, gestational and pre-diabetes, blood
+  sugar management, insulin, complications, nutrition and recipes, and diabetes lifestyle
+  content, monetized through sponsored sections from device and pharmaceutical advertisers.
+  The company was venture backed by Battery Ventures. As of a 2026-07-19 verification
+  pass the business appears defunct: its corporate domain lifemedmedia.com is parked
+  for sale on HugeDomains and dlife.com no longer resolves. No developer portal, API,
+  documentation, SDK, or other machine-readable surface has ever been identified for
+  this company.'
 url: https://raw.githubusercontent.com/api-evangelist/lifemed-media/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - battery-ventures
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: defunct-no-api-surface
+x-status: defunct
+x-status-verified: '2026-07-19'
+x-status-evidence:
+- lifemedmedia.com resolves to a HugeDomains for-sale parking page (HTTP 200, redirects
+  to hugedomains.com/domain_profile.cfm)
+- dlife.com and www.dlife.com do not resolve (curl exit / HTTP 000)
+- 'parked host returns soft-200 for every path probed (/.well-known/security.txt, /llms.txt,
+  /openapi.json) — these are parking-page catch-alls, not real artifacts, and were
+  deliberately NOT captured'
+- lifemed.com is an unrelated Northern California long-term care pharmacy, not this
+  company
+x-former-properties:
+- name: dLife.com
+  url: http://www.dlife.com/
+  status: offline
+- name: dLifeTV
+  status: offline
+- name: dLife Foundation
+  status: offline
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Health
+- Healthcare
+- Diabetes
+- Media
+- Publishing
+- Consumer Health
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
